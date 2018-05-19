@@ -3,6 +3,18 @@
 
 #include <QMainWindow>
 
+
+//操作类型枚举
+enum OP_TYPE {
+    OP_NONE,    //无
+    OP_SAVE_HAS,    //保存包含
+    OP_SAVE_NOT_HAS,    //保存不包含
+    OP_SAVE_BEFORE,     //保存之前
+    OP_SAVE_AFTER,  //保存之后
+    OP_COUNT    //枚举个数
+};
+
+
 namespace Ui {
 class MainWindow;
 }
@@ -27,6 +39,20 @@ private slots:
     void on_feedBackTextEdt_textChanged();
     //提交建议反馈按钮被点击
     void on_submitFeedBackMessageBtn_clicked();
+    //第一个操作选项被选择
+    void on_oneSpinner_currentIndexChanged(int index);
+
+    void on_oneOperatorSpinner_currentIndexChanged(int index);
+
+    void on_twoSpinner_currentIndexChanged(int index);
+
+    void on_twoOperatorSpinner_currentIndexChanged(int index);
+
+    void on_threeSpinner_currentIndexChanged(int index);
+
+    void on_threeOperatorSpinner_currentIndexChanged(int index);
+
+    void on_fourSpinner_currentIndexChanged(int index);
 
 private:
     Ui::MainWindow *ui;

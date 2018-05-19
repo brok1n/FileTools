@@ -25,10 +25,36 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
         main.cpp \
-        mainwindow.cpp
+        mainwindow.cpp \
+		circle.cpp \
+    smtpClient/emailaddress.cpp \
+    smtpClient/mimeattachment.cpp \
+    smtpClient/mimecontentformatter.cpp \
+    smtpClient/mimefile.cpp \
+    smtpClient/mimehtml.cpp \
+    smtpClient/mimeinlinefile.cpp \
+    smtpClient/mimemessage.cpp \
+    smtpClient/mimemultipart.cpp \
+    smtpClient/mimepart.cpp \
+    smtpClient/mimetext.cpp \
+    smtpClient/quotedprintable.cpp \
+    smtpClient/smtpclient.cpp
 
 HEADERS += \
-        mainwindow.h
+        mainwindow.h \
+		circle.h \
+    smtpClient/emailaddress.h \
+    smtpClient/mimeattachment.h \
+    smtpClient/mimecontentformatter.h \
+    smtpClient/mimefile.h \
+    smtpClient/mimehtml.h \
+    smtpClient/mimeinlinefile.h \
+    smtpClient/mimemessage.h \
+    smtpClient/mimemultipart.h \
+    smtpClient/mimepart.h \
+    smtpClient/mimetext.h \
+    smtpClient/quotedprintable.h \
+    smtpClient/smtpclient.h
 
 FORMS += \
         mainwindow.ui

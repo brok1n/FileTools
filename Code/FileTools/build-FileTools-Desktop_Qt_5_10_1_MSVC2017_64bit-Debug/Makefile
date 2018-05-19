@@ -233,6 +233,7 @@ Makefile: ..\FileTools\FileTools.pro I:\Tools\Qt\5.10.1\msvc2017_64\mkspecs\win3
 		I:\Tools\Qt\5.10.1\msvc2017_64\mkspecs\features\qt_config.prf \
 		I:\Tools\Qt\5.10.1\msvc2017_64\mkspecs\win32-msvc\qmake.conf \
 		I:\Tools\Qt\5.10.1\msvc2017_64\mkspecs\features\spec_post.prf \
+		.qmake.stash \
 		I:\Tools\Qt\5.10.1\msvc2017_64\mkspecs\features\exclusive_builds.prf \
 		I:\Tools\Qt\5.10.1\msvc2017_64\mkspecs\common\msvc-version.conf \
 		I:\Tools\Qt\5.10.1\msvc2017_64\mkspecs\features\toolchain.prf \
@@ -420,6 +421,7 @@ I:\Tools\Qt\5.10.1\msvc2017_64\mkspecs\features\qt_functions.prf:
 I:\Tools\Qt\5.10.1\msvc2017_64\mkspecs\features\qt_config.prf:
 I:\Tools\Qt\5.10.1\msvc2017_64\mkspecs\win32-msvc\qmake.conf:
 I:\Tools\Qt\5.10.1\msvc2017_64\mkspecs\features\spec_post.prf:
+.qmake.stash:
 I:\Tools\Qt\5.10.1\msvc2017_64\mkspecs\features\exclusive_builds.prf:
 I:\Tools\Qt\5.10.1\msvc2017_64\mkspecs\common\msvc-version.conf:
 I:\Tools\Qt\5.10.1\msvc2017_64\mkspecs\features\toolchain.prf:

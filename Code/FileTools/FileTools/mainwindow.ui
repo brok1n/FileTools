@@ -115,11 +115,6 @@
        </property>
        <item>
         <property name="text">
-         <string>无</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
          <string>保留包含</string>
         </property>
        </item>

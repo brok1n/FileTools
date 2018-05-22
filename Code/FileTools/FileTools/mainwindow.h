@@ -39,24 +39,28 @@ private slots:
     void on_feedBackTextEdt_textChanged();
     //提交建议反馈按钮被点击
     void on_submitFeedBackMessageBtn_clicked();
-    //第一个操作选项被选择
+    //第一个操作选项被改变
     void on_oneSpinner_currentIndexChanged(int index);
-
+    //第一个操作符被改变
     void on_oneOperatorSpinner_currentIndexChanged(int index);
-
+    //第二个操作选项被改变
     void on_twoSpinner_currentIndexChanged(int index);
-
+    //第二个操作符被改变
     void on_twoOperatorSpinner_currentIndexChanged(int index);
-
+    //第三个操作选项被改变
     void on_threeSpinner_currentIndexChanged(int index);
-
+    //第三个操作符被改变
     void on_threeOperatorSpinner_currentIndexChanged(int index);
-
+    //第四个操作选项被改变
     void on_fourSpinner_currentIndexChanged(int index);
+    //导出到一个文件 复选框状态改变
+    void on_exportToSingleFileCBox_stateChanged(int arg1);
 
 private:
     Ui::MainWindow *ui;
     QString processPath;//要处理的文件或目录
+    QList<OP_TYPE> *capabilityList; //
+    bool exportToSingleFile;//是否导出到一个文件中
 };
 
 #endif // MAINWINDOW_H

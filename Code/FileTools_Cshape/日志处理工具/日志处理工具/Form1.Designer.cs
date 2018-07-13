@@ -54,21 +54,32 @@
             this.label8 = new System.Windows.Forms.Label();
             this.mergeInpEdt = new System.Windows.Forms.TextBox();
             this.mergeBtn = new System.Windows.Forms.Button();
+            this.containsRegCbox = new System.Windows.Forms.CheckBox();
+            this.notContainsRegCbox = new System.Windows.Forms.CheckBox();
+            this.beforeRegCbox = new System.Windows.Forms.CheckBox();
+            this.afterRegCbox = new System.Windows.Forms.CheckBox();
+            this.substringRegCbox = new System.Windows.Forms.CheckBox();
+            this.substringBtn = new System.Windows.Forms.Button();
+            this.substringEdt = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // filePathEdt
             // 
-            this.filePathEdt.Location = new System.Drawing.Point(13, 50);
+            this.filePathEdt.AllowDrop = true;
+            this.filePathEdt.Location = new System.Drawing.Point(13, 40);
             this.filePathEdt.Name = "filePathEdt";
             this.filePathEdt.Size = new System.Drawing.Size(377, 21);
             this.filePathEdt.TabIndex = 0;
+            this.filePathEdt.DragDrop += new System.Windows.Forms.DragEventHandler(this.onFilePathEdtDragDrop);
+            this.filePathEdt.DragEnter += new System.Windows.Forms.DragEventHandler(this.onFilePathEdtDragEnter);
             this.filePathEdt.Leave += new System.EventHandler(this.filePathEdt_Leave);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 32);
+            this.label1.Location = new System.Drawing.Point(13, 22);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(125, 12);
             this.label1.TabIndex = 1;
@@ -76,7 +87,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(396, 50);
+            this.button1.Location = new System.Drawing.Point(396, 40);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 2;
@@ -87,7 +98,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(11, 109);
+            this.label2.Location = new System.Drawing.Point(11, 85);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(137, 12);
             this.label2.TabIndex = 3;
@@ -95,14 +106,14 @@
             // 
             // containsStrEdt
             // 
-            this.containsStrEdt.Location = new System.Drawing.Point(159, 104);
+            this.containsStrEdt.Location = new System.Drawing.Point(152, 80);
             this.containsStrEdt.Name = "containsStrEdt";
-            this.containsStrEdt.Size = new System.Drawing.Size(231, 21);
+            this.containsStrEdt.Size = new System.Drawing.Size(191, 21);
             this.containsStrEdt.TabIndex = 4;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(396, 104);
+            this.button2.Location = new System.Drawing.Point(396, 80);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 5;
@@ -113,7 +124,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(11, 162);
+            this.label3.Location = new System.Drawing.Point(11, 131);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(149, 12);
             this.label3.TabIndex = 6;
@@ -121,14 +132,14 @@
             // 
             // noContainsStrEdt
             // 
-            this.noContainsStrEdt.Location = new System.Drawing.Point(169, 157);
+            this.noContainsStrEdt.Location = new System.Drawing.Point(164, 126);
             this.noContainsStrEdt.Name = "noContainsStrEdt";
-            this.noContainsStrEdt.Size = new System.Drawing.Size(221, 21);
+            this.noContainsStrEdt.Size = new System.Drawing.Size(179, 21);
             this.noContainsStrEdt.TabIndex = 7;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(397, 157);
+            this.button3.Location = new System.Drawing.Point(397, 126);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 8;
@@ -138,7 +149,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(397, 210);
+            this.button4.Location = new System.Drawing.Point(397, 171);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
             this.button4.TabIndex = 11;
@@ -148,15 +159,15 @@
             // 
             // beforeStrEdt
             // 
-            this.beforeStrEdt.Location = new System.Drawing.Point(169, 210);
+            this.beforeStrEdt.Location = new System.Drawing.Point(153, 171);
             this.beforeStrEdt.Name = "beforeStrEdt";
-            this.beforeStrEdt.Size = new System.Drawing.Size(221, 21);
+            this.beforeStrEdt.Size = new System.Drawing.Size(190, 21);
             this.beforeStrEdt.TabIndex = 10;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(11, 215);
+            this.label4.Location = new System.Drawing.Point(11, 176);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(137, 12);
             this.label4.TabIndex = 9;
@@ -164,7 +175,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(397, 261);
+            this.button5.Location = new System.Drawing.Point(397, 217);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(75, 23);
             this.button5.TabIndex = 14;
@@ -174,15 +185,15 @@
             // 
             // afterStrEdt
             // 
-            this.afterStrEdt.Location = new System.Drawing.Point(169, 261);
+            this.afterStrEdt.Location = new System.Drawing.Point(152, 217);
             this.afterStrEdt.Name = "afterStrEdt";
-            this.afterStrEdt.Size = new System.Drawing.Size(221, 21);
+            this.afterStrEdt.Size = new System.Drawing.Size(191, 21);
             this.afterStrEdt.TabIndex = 13;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(11, 266);
+            this.label5.Location = new System.Drawing.Point(11, 222);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(137, 12);
             this.label5.TabIndex = 12;
@@ -259,10 +270,13 @@
             // 
             // mergeInpEdt
             // 
+            this.mergeInpEdt.AllowDrop = true;
             this.mergeInpEdt.Location = new System.Drawing.Point(12, 377);
             this.mergeInpEdt.Name = "mergeInpEdt";
             this.mergeInpEdt.Size = new System.Drawing.Size(295, 21);
             this.mergeInpEdt.TabIndex = 20;
+            this.mergeInpEdt.DragDrop += new System.Windows.Forms.DragEventHandler(this.onMergeEdtDragDrop);
+            this.mergeInpEdt.DragEnter += new System.Windows.Forms.DragEventHandler(this.onMergeEdtDragEnter);
             // 
             // mergeBtn
             // 
@@ -274,11 +288,95 @@
             this.mergeBtn.UseVisualStyleBackColor = true;
             this.mergeBtn.Click += new System.EventHandler(this.mergeBtn_Click);
             // 
+            // containsRegCbox
+            // 
+            this.containsRegCbox.AutoSize = true;
+            this.containsRegCbox.Location = new System.Drawing.Point(349, 84);
+            this.containsRegCbox.Name = "containsRegCbox";
+            this.containsRegCbox.Size = new System.Drawing.Size(48, 16);
+            this.containsRegCbox.TabIndex = 24;
+            this.containsRegCbox.Text = "正则";
+            this.containsRegCbox.UseVisualStyleBackColor = true;
+            // 
+            // notContainsRegCbox
+            // 
+            this.notContainsRegCbox.AutoSize = true;
+            this.notContainsRegCbox.Location = new System.Drawing.Point(349, 130);
+            this.notContainsRegCbox.Name = "notContainsRegCbox";
+            this.notContainsRegCbox.Size = new System.Drawing.Size(48, 16);
+            this.notContainsRegCbox.TabIndex = 25;
+            this.notContainsRegCbox.Text = "正则";
+            this.notContainsRegCbox.UseVisualStyleBackColor = true;
+            // 
+            // beforeRegCbox
+            // 
+            this.beforeRegCbox.AutoSize = true;
+            this.beforeRegCbox.Location = new System.Drawing.Point(349, 176);
+            this.beforeRegCbox.Name = "beforeRegCbox";
+            this.beforeRegCbox.Size = new System.Drawing.Size(48, 16);
+            this.beforeRegCbox.TabIndex = 26;
+            this.beforeRegCbox.Text = "正则";
+            this.beforeRegCbox.UseVisualStyleBackColor = true;
+            // 
+            // afterRegCbox
+            // 
+            this.afterRegCbox.AutoSize = true;
+            this.afterRegCbox.Location = new System.Drawing.Point(349, 222);
+            this.afterRegCbox.Name = "afterRegCbox";
+            this.afterRegCbox.Size = new System.Drawing.Size(48, 16);
+            this.afterRegCbox.TabIndex = 27;
+            this.afterRegCbox.Text = "正则";
+            this.afterRegCbox.UseVisualStyleBackColor = true;
+            // 
+            // substringRegCbox
+            // 
+            this.substringRegCbox.AutoSize = true;
+            this.substringRegCbox.Location = new System.Drawing.Point(349, 268);
+            this.substringRegCbox.Name = "substringRegCbox";
+            this.substringRegCbox.Size = new System.Drawing.Size(48, 16);
+            this.substringRegCbox.TabIndex = 31;
+            this.substringRegCbox.Text = "正则";
+            this.substringRegCbox.UseVisualStyleBackColor = true;
+            // 
+            // substringBtn
+            // 
+            this.substringBtn.Location = new System.Drawing.Point(397, 263);
+            this.substringBtn.Name = "substringBtn";
+            this.substringBtn.Size = new System.Drawing.Size(75, 23);
+            this.substringBtn.TabIndex = 30;
+            this.substringBtn.Text = "开始处理";
+            this.substringBtn.UseVisualStyleBackColor = true;
+            this.substringBtn.Click += new System.EventHandler(this.substringBtn_Click);
+            // 
+            // substringEdt
+            // 
+            this.substringEdt.Location = new System.Drawing.Point(82, 263);
+            this.substringEdt.Name = "substringEdt";
+            this.substringEdt.Size = new System.Drawing.Size(261, 21);
+            this.substringEdt.TabIndex = 29;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(11, 268);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(65, 12);
+            this.label9.TabIndex = 28;
+            this.label9.Text = "去除行内容";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(489, 445);
+            this.Controls.Add(this.substringRegCbox);
+            this.Controls.Add(this.substringBtn);
+            this.Controls.Add(this.substringEdt);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.afterRegCbox);
+            this.Controls.Add(this.beforeRegCbox);
+            this.Controls.Add(this.notContainsRegCbox);
+            this.Controls.Add(this.containsRegCbox);
             this.Controls.Add(this.mergeBtn);
             this.Controls.Add(this.selectMergeFolderBtn);
             this.Controls.Add(this.label8);
@@ -306,7 +404,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
-            this.Text = "日志处理工具 V1.0.2 - by 贾亮亮";
+            this.Text = "日志处理工具 V1.1.1 - by brok1n";
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -341,6 +439,14 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox mergeInpEdt;
         private System.Windows.Forms.Button mergeBtn;
+        private System.Windows.Forms.CheckBox containsRegCbox;
+        private System.Windows.Forms.CheckBox notContainsRegCbox;
+        private System.Windows.Forms.CheckBox beforeRegCbox;
+        private System.Windows.Forms.CheckBox afterRegCbox;
+        private System.Windows.Forms.CheckBox substringRegCbox;
+        private System.Windows.Forms.Button substringBtn;
+        private System.Windows.Forms.TextBox substringEdt;
+        private System.Windows.Forms.Label label9;
     }
 }
 

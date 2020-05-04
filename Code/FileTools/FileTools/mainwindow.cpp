@@ -7,9 +7,16 @@
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
-    ui(new Ui::MainWindow)
+    ui(new Ui::MainWindow),
+    capabilityList(new QList<OP_TYPE>())
 {
     ui->setupUi(this);
+
+    capabilityList += OP_NONE;
+    capabilityList += OP_SAVE_HAS;
+    capabilityList += OP_SAVE_NOT_HAS;
+    capabilityList += OP_SAVE_BEFORE;
+    capabilityList += OP_SAVE_AFTER;
 
     //初始化
     //将操作选项 默认只可以选择第一个  第一个选择之后 才可以选择第二个
@@ -164,6 +171,7 @@ void MainWindow::on_oneSpinner_currentIndexChanged(int index)
 
 }
 
+//第一个操作符被改变
 void MainWindow::on_oneOperatorSpinner_currentIndexChanged(int index)
 {
     //当选择了第一个操作符 则 第二个操作可以被选择
@@ -195,6 +203,7 @@ void MainWindow::on_oneOperatorSpinner_currentIndexChanged(int index)
     }
 }
 
+//第二个操作选项被改变
 void MainWindow::on_twoSpinner_currentIndexChanged(int index)
 {
     //当选择了第二个操作 则 第二个操作符可以被选择
@@ -222,6 +231,7 @@ void MainWindow::on_twoSpinner_currentIndexChanged(int index)
     }
 }
 
+//第二个操作符被改变
 void MainWindow::on_twoOperatorSpinner_currentIndexChanged(int index)
 {
     //当选择了第二个操作符 则 第三个操作可以被选择
@@ -249,6 +259,7 @@ void MainWindow::on_twoOperatorSpinner_currentIndexChanged(int index)
     }
 }
 
+//第三个操作选项被改变
 void MainWindow::on_threeSpinner_currentIndexChanged(int index)
 {
     //当选择了第三个操作 则 第三个操作符可以被选择
@@ -274,6 +285,7 @@ void MainWindow::on_threeSpinner_currentIndexChanged(int index)
     }
 }
 
+//第三个操作符被改变
 void MainWindow::on_threeOperatorSpinner_currentIndexChanged(int index)
 {
     //当选择了第三个操作符  则 第四个操作可以被选择
@@ -298,7 +310,18 @@ void MainWindow::on_threeOperatorSpinner_currentIndexChanged(int index)
     }
 }
 
+//第四个操作选项被改变
 void MainWindow::on_fourSpinner_currentIndexChanged(int index)
 {
 
+}
+
+//导出到一个文件 复选框状态改变
+void MainWindow::on_exportToSingleFileCBox_stateChanged(int arg1)
+{
+    if ( arg1 == Qt::Checked ) {
+        this->exportToSingleFile = true;
+    } else {
+        this->exportToSingleFile = false;
+    }
 }
